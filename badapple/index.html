@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bad Apple!!</title>
+    <embed src="badapple\0.mp3" hidden="true" autostart="true" loop="true">
+    <style> 
+body{ text-align:center} 
+.div{ margin:0 auto; width:auto; height:auto} 
+</style> 
+</head>
+<body>
+        <div class="div"> 
+<br />
+     <font size="20"> <strong>Bad Apple!!</strong>
+<br />
+     <font id="ssr" size="6"><span style='white-space:pre;'>fps: 30     frame: 1 / 6575</font>
+     </div> 
+     <br />
+
+<img src="badapple/1.jpg" id="img" height="auto" width="40%" />
+</body>
+<script>
+    var oImg = document.getElementById('img');
+    var timer = null;
+
+    var oStr = document.getElementById('ssr');
+
+    var i = 2;
+
+    timer = setInterval(function(){
+        oImg.src = 'badapple/'+i+'.jpg';
+        oStr.innerHTML="<span style='white-space:pre;'>fps: 30     frame: "+i+" / 6575";
+        i++;
+
+        if(i>6575){clearInterval(timer);}
+
+    },33);
+</script>
+</html>
